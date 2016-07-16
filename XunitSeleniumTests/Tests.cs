@@ -3,6 +3,7 @@ using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 using System;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace XunitSeleniumTests
 {
@@ -18,16 +19,18 @@ namespace XunitSeleniumTests
         [Fact]
         public void OPS()
         {
-            Assert.True(0 == 1);
+            Assert.False(0 == 1);
         }
     }
 
     public class SeleniumTests : IDisposable
     {
         private readonly RemoteWebDriver _driver;
+        private readonly ITestOutputHelper _output;
 
-        public SeleniumTests()
+        public SeleniumTests(ITestOutputHelper output)
         {
+            _output = output;
             var capability = DesiredCapabilities.Chrome();
             _driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), capability);
         }
@@ -52,6 +55,8 @@ namespace XunitSeleniumTests
             IWebElement myDynamicElement = wait.Until<IWebElement>(d => d.FindElement(By.Id("resultStats")));
 
             Assert.Contains("Cheese", _driver.Title);
+
+            _output.WriteLine(_driver.Title);
         }
     }
 }
