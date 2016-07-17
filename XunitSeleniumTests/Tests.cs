@@ -31,8 +31,9 @@ namespace XunitSeleniumTests
         public SeleniumTests(ITestOutputHelper output)
         {
             _output = output;
-            var capability = DesiredCapabilities.Chrome();
+            var capability = DesiredCapabilities.Edge();
             _driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), capability);
+            //_driver = new EdgeDriver();
         }
 
         public void Dispose()
