@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25029.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XunitSeleniumTests", "XunitSeleniumTests\XunitSeleniumTests.csproj", "{8FF41B41-776F-43BB-A95C-D062C4014615}"
 EndProject
@@ -12,7 +12,9 @@ Global
 		Chrome|Any CPU = Chrome|Any CPU
 		ChromeLocal|Any CPU = ChromeLocal|Any CPU
 		Debug|Any CPU = Debug|Any CPU
+		Edge|Any CPU = Edge|Any CPU
 		EdgeLocal|Any CPU = EdgeLocal|Any CPU
+		Firefox|Any CPU = Firefox|Any CPU
 		FirefoxLocal|Any CPU = FirefoxLocal|Any CPU
 		Release|Any CPU = Release|Any CPU
 		Remote|Any CPU = Remote|Any CPU
@@ -24,8 +26,12 @@ Global
 		{8FF41B41-776F-43BB-A95C-D062C4014615}.ChromeLocal|Any CPU.Build.0 = ChromeLocal|Any CPU
 		{8FF41B41-776F-43BB-A95C-D062C4014615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8FF41B41-776F-43BB-A95C-D062C4014615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FF41B41-776F-43BB-A95C-D062C4014615}.Edge|Any CPU.ActiveCfg = Edge|Any CPU
+		{8FF41B41-776F-43BB-A95C-D062C4014615}.Edge|Any CPU.Build.0 = Edge|Any CPU
 		{8FF41B41-776F-43BB-A95C-D062C4014615}.EdgeLocal|Any CPU.ActiveCfg = EdgeLocal|Any CPU
 		{8FF41B41-776F-43BB-A95C-D062C4014615}.EdgeLocal|Any CPU.Build.0 = EdgeLocal|Any CPU
+		{8FF41B41-776F-43BB-A95C-D062C4014615}.Firefox|Any CPU.ActiveCfg = Firefox|Any CPU
+		{8FF41B41-776F-43BB-A95C-D062C4014615}.Firefox|Any CPU.Build.0 = Firefox|Any CPU
 		{8FF41B41-776F-43BB-A95C-D062C4014615}.FirefoxLocal|Any CPU.ActiveCfg = FirefoxLocal|Any CPU
 		{8FF41B41-776F-43BB-A95C-D062C4014615}.FirefoxLocal|Any CPU.Build.0 = FirefoxLocal|Any CPU
 		{8FF41B41-776F-43BB-A95C-D062C4014615}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -38,8 +44,12 @@ Global
 		{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}.ChromeLocal|Any CPU.Build.0 = ChromeLocal|Any CPU
 		{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}.Edge|Any CPU.ActiveCfg = Edge|Any CPU
+		{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}.Edge|Any CPU.Build.0 = Edge|Any CPU
 		{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}.EdgeLocal|Any CPU.ActiveCfg = EdgeLocal|Any CPU
 		{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}.EdgeLocal|Any CPU.Build.0 = EdgeLocal|Any CPU
+		{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}.Firefox|Any CPU.ActiveCfg = FirefoxLocal|Any CPU
+		{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}.Firefox|Any CPU.Build.0 = FirefoxLocal|Any CPU
 		{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}.FirefoxLocal|Any CPU.ActiveCfg = FirefoxLocal|Any CPU
 		{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}.FirefoxLocal|Any CPU.Build.0 = FirefoxLocal|Any CPU
 		{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
