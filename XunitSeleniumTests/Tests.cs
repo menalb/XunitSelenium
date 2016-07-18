@@ -31,9 +31,6 @@ namespace XunitSeleniumTests
         public SeleniumTests(ITestOutputHelper output)
         {
             _output = output;
-            //var capability = DesiredCapabilities.Edge();
-            //_driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), capability);
-            //webDriver = new ChromeDriver();
         }
 
         [Fact]
@@ -41,14 +38,13 @@ namespace XunitSeleniumTests
         {
             webDriver.Url = rootUrl;            
 
-            IWebElement element = webDriver.FindElement(By.Name("q"));
-            element.SendKeys("Cat!");
-            element.Submit();
+            IWebElement element = webDriver.FindElement(By.LinkText("About"));
+            element.Click();
             
             WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
-            var myDynamicElement = wait.Until(d => d.FindElement(By.Id("resultStats")));
+            var myDynamicElement = wait.Until(d => d.FindElement(By.TagName("h3")));
             
-            Assert.Contains("Cat", webDriver.Title);
+            Assert.Contains("Your application description page.", webDriver.FindElement(By.TagName("h3")).Text);
 
             PickScreenShootAsJPG("SeleniumTest1");
 

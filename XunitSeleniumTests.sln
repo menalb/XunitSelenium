@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XunitSeleniumTests", "Xunit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPP.SeleniumTests.Bootstrapper", "PPP.SeleniumTests.Bootstrapper\PPP.SeleniumTests.Bootstrapper.csproj", "{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIToTest", "UIToTest\UIToTest.csproj", "{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Chrome|Any CPU = Chrome|Any CPU
@@ -56,6 +58,24 @@ Global
 		{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}.Remote|Any CPU.ActiveCfg = Remote|Any CPU
 		{BCD6F195-3F6F-41A8-87AF-4689EF5614FE}.Remote|Any CPU.Build.0 = Remote|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.Chrome|Any CPU.ActiveCfg = Release|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.Chrome|Any CPU.Build.0 = Release|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.ChromeLocal|Any CPU.ActiveCfg = Release|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.ChromeLocal|Any CPU.Build.0 = Release|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.Edge|Any CPU.ActiveCfg = Release|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.Edge|Any CPU.Build.0 = Release|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.EdgeLocal|Any CPU.ActiveCfg = Release|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.EdgeLocal|Any CPU.Build.0 = Release|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.Firefox|Any CPU.ActiveCfg = Release|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.Firefox|Any CPU.Build.0 = Release|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.FirefoxLocal|Any CPU.ActiveCfg = Release|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.FirefoxLocal|Any CPU.Build.0 = Release|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.Remote|Any CPU.ActiveCfg = Release|Any CPU
+		{06ADE957-2FA3-4A69-8D8C-209B35B3AC0C}.Remote|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
