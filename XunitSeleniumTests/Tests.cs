@@ -40,7 +40,9 @@ namespace XunitSeleniumTests
 
             IWebElement element = webDriver.FindElement(By.LinkText("About"));
             element.Click();
-            
+
+            System.Threading.Thread.Sleep(2000);
+
             WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
             var myDynamicElement = wait.Until(d => d.FindElement(By.TagName("h3")));
             
