@@ -46,7 +46,7 @@ namespace XunitSeleniumTests
             WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
             var myDynamicElement = wait.Until(d => d.FindElement(By.TagName("h3")));
             
-            Assert.Contains("Your application best description page.", webDriver.FindElement(By.TagName("h3")).Text);
+            Assert.Contains("Your application description page.", webDriver.FindElement(By.TagName("h3")).Text);
 
             PickScreenShootAsJPG("SeleniumTest1");
 
