@@ -50,7 +50,7 @@ namespace XunitSeleniumTests
             
             Assert.Contains("Cat", webDriver.Title);
 
-            //PickScreenShootAsJPG("SeleniumTest1");
+            PickScreenShootAsJPG("SeleniumTest1");
 
             _output.WriteLine(webDriver.Title);
         }
