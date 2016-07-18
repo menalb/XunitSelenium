@@ -4,7 +4,12 @@ using System.Configuration;
 namespace PPP.SeleniumTests.Bootstrapper
 {
     public class TestsSettings
-    {
+    {        
+        public static string ScreenShootsFolderPath()
+        {
+            return ConfigurationManager.AppSettings["screenShootsFolderPath"];
+        }
+
         public static bool IsRemoteDriver()
         {
             return bool.Parse(ConfigurationManager.AppSettings["isRemote"]);

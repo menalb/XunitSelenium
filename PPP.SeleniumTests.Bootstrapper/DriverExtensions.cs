@@ -3,6 +3,7 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using System.Linq;
 using System.Threading;
+using System.Drawing.Imaging;
 
 namespace PPP.SeleniumTests.Bootstrapper
 {
@@ -72,6 +73,11 @@ namespace PPP.SeleniumTests.Bootstrapper
             {
                 return false;
             }
+        }
+
+        public static void PickScreenShoot(this IWebDriver driver, string fileFullPath, ImageFormat imageFormat)
+        {
+            (driver as ITakesScreenshot).GetScreenshot().SaveAsFile(fileFullPath, imageFormat);
         }
     }
 }

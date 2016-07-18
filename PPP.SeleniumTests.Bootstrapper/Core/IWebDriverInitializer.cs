@@ -8,5 +8,5 @@ namespace PPP.SeleniumTests.Bootstrapper.Core
         IWebDriver GetWebDriver();
         IWebDriver GetWebDriver(string driverPath);
         IWebDriver GetRemotwWebDriver(Uri remoteWebDriverServer);
-    }   
+    }
 }

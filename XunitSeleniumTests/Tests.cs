@@ -46,9 +46,11 @@ namespace XunitSeleniumTests
             IWebElement element = webDriver.FindElement(By.Name("q"));
             element.SendKeys("Cheese!");
             element.Submit();
-
+            
             WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
             var myDynamicElement = wait.Until(d => d.FindElement(By.Id("resultStats")));
+
+            PickScreenShootAsJPG("SeleniumTest1");
 
             Assert.Contains("Cheese", webDriver.Title);
 
