@@ -1,9 +1,10 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 using System;
 using Xunit;
 using Xunit.Abstractions;
+
+using PPP.SeleniumTests.Bootstrapper.Tests;
 
 namespace XunitSeleniumTests
 {
@@ -23,41 +24,35 @@ namespace XunitSeleniumTests
         }
     }
 
-    public class SeleniumTests : IDisposable
+    public class SeleniumTests : BaseSeleniumTest
     {
-        private readonly RemoteWebDriver _driver;
         private readonly ITestOutputHelper _output;
 
         public SeleniumTests(ITestOutputHelper output)
         {
             _output = output;
-            var capability = DesiredCapabilities.Edge();
-            _driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), capability);
-            //_driver = new EdgeDriver();
-        }
-
-        public void Dispose()
-        {
-            _driver.Quit();
-            _driver.Dispose();
+            //var capability = DesiredCapabilities.Edge();
+            //_driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), capability);
+            //webDriver = new ChromeDriver();
         }
 
         [Fact]
         public void SeleniumTest()
         {
-            _driver.Url = "http://www.google.com";
-            _driver.Navigate();
+            webDriver.Url = rootUrl;
 
-            IWebElement element = _driver.FindElement(By.Name("q"));
+            _output.WriteLine($"driver:  {System.Configuration.ConfigurationManager.AppSettings["seleniumWebDriverName"].ToString()}");            
+
+            IWebElement element = webDriver.FindElement(By.Name("q"));
             element.SendKeys("Cheese!");
             element.Submit();
 
-            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
-            IWebElement myDynamicElement = wait.Until<IWebElement>(d => d.FindElement(By.Id("resultStats")));
+            WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
+            var myDynamicElement = wait.Until(d => d.FindElement(By.Id("resultStats")));
 
-            Assert.Contains("Cheese", _driver.Title);
+            Assert.Contains("Cheese", webDriver.Title);
 
-            _output.WriteLine(_driver.Title);
+            _output.WriteLine(webDriver.Title);
         }
     }
 }
