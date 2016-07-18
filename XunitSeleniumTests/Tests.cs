@@ -39,20 +39,18 @@ namespace XunitSeleniumTests
         [Fact]
         public void SeleniumTest()
         {
-            webDriver.Url = rootUrl;
-
-            _output.WriteLine($"driver:  {System.Configuration.ConfigurationManager.AppSettings["seleniumWebDriverName"].ToString()}");            
+            webDriver.Url = rootUrl;            
 
             IWebElement element = webDriver.FindElement(By.Name("q"));
-            element.SendKeys("Cheese!");
+            element.SendKeys("Cat!");
             element.Submit();
             
             WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
             var myDynamicElement = wait.Until(d => d.FindElement(By.Id("resultStats")));
+            
+            Assert.Contains("Cat", webDriver.Title);
 
             PickScreenShootAsJPG("SeleniumTest1");
-
-            Assert.Contains("Cheese", webDriver.Title);
 
             _output.WriteLine(webDriver.Title);
         }

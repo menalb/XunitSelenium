@@ -9,7 +9,7 @@ namespace PPP.SeleniumTests.Bootstrapper.Tests
         protected readonly string rootUrl;
         private readonly string _driverName;
         private readonly string _driverPath;
-        private readonly string _screenShootPath;
+        private readonly string _screenShootPath;        
 
         public BaseSeleniumTest()
         {
